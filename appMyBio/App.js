@@ -15,6 +15,7 @@ import {
   Image,
   View,
   Linking,
+  Pressable,
 } from 'react-native';
 
 import {
@@ -78,7 +79,24 @@ const App = () => {
             Inglês (intermediário).
           </Text>
         </View> 
-
+          {/*  */}
+        <View style={[ styles.textContainer, { alignItems:"flex-start"} ]}>
+          <Text style={styles.heading}>Projetos</Text>
+          
+          <Pressable onPress={() => {Linking.openURL("https://mynotepad-production.herokuapp.com/")}}>
+              <Text style={styles.paragraph}>
+                Mynotepad (Toque aqui para visualizar)
+              </Text>
+          </Pressable>
+          {/* Parágrafo */}
+          <Text style={[styles.paragraph]}>
+            Unip Resort - Gestão
+          </Text>
+          {/* Parágrafo */}
+          <Text>
+            Unip Resort - Frontend
+          </Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
